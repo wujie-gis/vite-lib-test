@@ -1,16 +1,31 @@
 {
-  "name": "vite-lib-test",
+  "name": "bm-tool-test",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "JavaScript 的小工具，验证 JavaScript 的数据类型，输出调试信息等。",
+  "keyword": "JavaScript typeof log",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/bm-tool-test.umd.js",
+  "module": "./dist/bm-tool-test.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/bm-tool-test.es.js",
+      "require": "./dist/bm-tool-test.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "element-plus": "^2.0.4",
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@types/node": "^17.0.21",
     "@vitejs/plugin-vue": "^2.2.0",
     "typescript": "^4.5.4",
     "vite": "^2.8.0",

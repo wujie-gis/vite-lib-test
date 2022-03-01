@@ -5,12 +5,20 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    // 填过 lib 检查
+    "skipLibCheck": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/lib/utils.js"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  // 只手动排除不检测的目录
+  "exclude": ["node_modules", "dist", "public"]
 }
