@@ -1,3 +1,10 @@
+<!--
+ * @Author: wuj
+ * @Date: 2022-03-01 11:20:25
+ * @LastEditors: wuj
+ * @LastEditTime: 2022-03-01 17:20:10
+ * @Description: 
+-->
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
@@ -6,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import BText from "@/components/BText.vue";
+import BText from "./components/BText.vue";
 </script>
 <style>
 #app {

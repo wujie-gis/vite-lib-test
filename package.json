@@ -1,6 +1,5 @@
 {
   "name": "bm-tool-test",
-  "private": true,
   "version": "0.0.1",
   "description": "JavaScript 的小工具，验证 JavaScript 的数据类型，输出调试信息等。",
   "keyword": "JavaScript typeof log",
@@ -17,7 +16,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build --mode project",
+    "lib": "vite build --mode lib",
     "preview": "vite preview"
   },
   "dependencies": {
